@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Dashboard</h1>
+        <h2>Tasks:</h2>
+        <ul>
+            {% for task in tasks %}
+                <li>
+                    <h3>{{ task[1] }}</h3>
+                    <p>Task ID: {{ task[0] }}</p>
+                    <p>Description: {{ task[2] }}</p>
+                    <p>Status: {{ task[3] }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('add') }}">Add a New Task</a>
+        <a href="{{ url_for('update') }}">Update a Task Status</a>
+        <a href="{{ url_for('remove') }}">Remove a Task</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>

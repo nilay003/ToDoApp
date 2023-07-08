@@ -1,0 +1,19 @@
+
+CREATE TABLE USERS 
+(
+    Username CHAR(30) PRIMARY KEY,
+    FirstName CHAR(20),
+    LastName CHAR(20),
+    Password VARCHAR(200) -- Increase the length to 100 or more
+);
+
+CREATE TABLE TASK (
+    TaskID INT AUTO_INCREMENT PRIMARY KEY,
+    Username CHAR(30),
+    TaskTitle CHAR(30),
+    Description VARCHAR(200),
+    Status ENUM('Pending', 'Progress', 'Completed') DEFAULT 'Pending',
+    FOREIGN KEY (Username) REFERENCES USERS (Username)
+);
+
+

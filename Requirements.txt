@@ -1,0 +1,5 @@
+Create a MySQL database 
+Create A Databse named ToDoApp
+run the script provided in the Database_script folder
+
+Either You can use directly from Deployment Link:- http://nilay003.pythonanywhere.com/
