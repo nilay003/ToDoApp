@@ -5,16 +5,16 @@ from werkzeug.security import generate_password_hash, check_password_hash
 app = Flask(__name__)
 app.secret_key = '5665'
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'ToDoApp'
-mysql = MySQL(app)
+#app.config['MYSQL_HOST'] = 'localhost'
+#app.config['MYSQL_USER'] = 'root'
+#app.config['MYSQL_PASSWORD'] = ''
+#app.config['MYSQL_DB'] = 'ToDoApp'
 
-# app.config['MYSQL_HOST'] = 'nilay003.mysql.pythonanywhere-services.com'
-# app.config['MYSQL_USER'] = 'nilay003'
-# app.config['MYSQL_PASSWORD'] = '@Nilay0112'
-# app.config['MYSQL_DB'] = 'nilay003$ToDoApp'
+app.config['MYSQL_HOST'] = 'nilay003.mysql.pythonanywhere-services.com'
+app.config['MYSQL_USER'] = 'nilay003'
+app.config['MYSQL_PASSWORD'] = '@Nilay0112'
+app.config['MYSQL_DB'] = 'nilay003$ToDoApp'
+mysql = MySQL(app)
 
 
 
